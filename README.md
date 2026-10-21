@@ -1,4 +1,6 @@
-# ⚡ Eveus EV Charger + Cost
+<img src="custom_components/evse_charging_cost/brand/icon.png" width="96" align="left" alt="" hspace="12">
+
+# Eveus EV Charger + Cost
 
 [![hacs][hacs-badge]][hacs-url]
 [![validate][validate-badge]][validate-url]
