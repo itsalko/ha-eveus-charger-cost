@@ -12,7 +12,7 @@
  *     power: sensor.eveus_power
  */
 
-const FLOW_CARD_VERSION = "2.13.0";
+const FLOW_CARD_VERSION = "2.14.0";
 
 // translation_key of each entity, used to find it in the entity registry no
 // matter which language the entity_ids were generated in.

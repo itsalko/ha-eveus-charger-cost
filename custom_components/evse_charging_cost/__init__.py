@@ -30,7 +30,7 @@ type EveusConfigEntry = ConfigEntry[EveusCoordinator]
 
 CARD_FILE = "eveus-flow-card.js"
 CARD_URL = f"/{DOMAIN}/{CARD_FILE}"
-CARD_VERSION = "2.13.0"
+CARD_VERSION = "2.14.0"
 CARD_URL_VERSIONED = f"{CARD_URL}?v={CARD_VERSION}"
 
 
