@@ -1,0 +1,249 @@
+{
+  "title": "Eveus EV Charger + Cost",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to the charger",
+        "description": "Enter the charger's IP address. User name and password are only needed if the web interface asks for them.",
+        "data": {
+          "device_name": "Device name",
+          "host": "IP address",
+          "username": "User name",
+          "password": "Password",
+          "phases": "Phases",
+          "scan_interval": "Polling interval",
+          "max_current": "Maximum charging current",
+          "reapply_current": "Re-apply current after the car connects",
+          "reapply_delay": "Delay before re-applying"
+        },
+        "data_description": {
+          "host": "For example 192.168.1.50.",
+          "scan_interval": "How often the charger is polled, in seconds.",
+          "max_current": "The highest current your charger and wiring allow, e.g. 16 A.",
+          "reapply_current": "Many cars keep charging at 6 A if the limit was set before they were plugged in. The charger only tells the car about a limit when it changes, so the setting is stepped by 1 A and written back.",
+          "reapply_delay": "Seconds to wait after the car connects."
+        }
+      },
+      "tariff": {
+        "title": "Two-zone tariff",
+        "description": "Prices are applied to the energy charged from now on; already counted costs stay unchanged.",
+        "data": {
+          "day_price": "Day price per kWh",
+          "night_price": "Night price per kWh",
+          "night_start": "Night tariff starts at",
+          "night_end": "Night tariff ends at",
+          "currency": "Currency"
+        },
+        "data_description": {
+          "currency": "ISO 4217 code, e.g. UAH, EUR."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Charger credentials",
+        "data": {
+          "username": "User name",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the charger.",
+      "invalid_auth": "Wrong user name or password.",
+      "invalid_time": "Invalid time.",
+      "same_time": "Night start and end must differ."
+    },
+    "abort": {
+      "already_configured": "This charger is already configured.",
+      "reauth_successful": "Credentials updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Charger and tariff settings",
+        "description": "Prices are applied to the energy charged from now on; already counted costs stay unchanged.",
+        "data": {
+          "device_name": "Device name",
+          "host": "IP address",
+          "username": "User name",
+          "password": "Password",
+          "phases": "Phases",
+          "scan_interval": "Polling interval",
+          "day_price": "Day price per kWh",
+          "night_price": "Night price per kWh",
+          "night_start": "Night tariff starts at",
+          "night_end": "Night tariff ends at",
+          "currency": "Currency",
+          "max_current": "Maximum charging current",
+          "reapply_current": "Re-apply current after the car connects",
+          "reapply_delay": "Delay before re-applying"
+        },
+        "data_description": {
+          "host": "For example 192.168.1.50.",
+          "scan_interval": "How often the charger is polled, in seconds.",
+          "currency": "ISO 4217 code, e.g. UAH, EUR.",
+          "max_current": "The highest current your charger and wiring allow, e.g. 16 A.",
+          "reapply_current": "Many cars keep charging at 6 A if the limit was set before they were plugged in. The charger only tells the car about a limit when it changes, so the setting is stepped by 1 A and written back.",
+          "reapply_delay": "Seconds to wait after the car connects."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the charger.",
+      "invalid_auth": "Wrong user name or password.",
+      "invalid_time": "Invalid time.",
+      "same_time": "Night start and end must differ."
+    }
+  },
+  "selector": {
+    "phases": {
+      "options": {
+        "1": "Single phase",
+        "3": "Three phase"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "status": {
+        "name": "Status",
+        "state": {
+          "power_up": "Powering up",
+          "self_test": "Self test",
+          "standby": "Standby",
+          "car_connected": "Car connected",
+          "charging": "Charging",
+          "charging_complete": "Charging complete",
+          "disabled": "Disabled",
+          "error": "Error"
+        }
+      },
+      "power": {
+        "name": "Power"
+      },
+      "session_energy": {
+        "name": "Session energy"
+      },
+      "total_energy": {
+        "name": "Total energy"
+      },
+      "session_time": {
+        "name": "Session time"
+      },
+      "current_set": {
+        "name": "Current setpoint"
+      },
+      "box_temperature": {
+        "name": "Box temperature"
+      },
+      "plug_temperature": {
+        "name": "Plug temperature"
+      },
+      "leakage": {
+        "name": "Leakage current"
+      },
+      "charger_time": {
+        "name": "Charger time"
+      },
+      "voltage_l1": {
+        "name": "Voltage L1"
+      },
+      "voltage_l2": {
+        "name": "Voltage L2"
+      },
+      "voltage_l3": {
+        "name": "Voltage L3"
+      },
+      "current_l1": {
+        "name": "Current L1"
+      },
+      "current_l2": {
+        "name": "Current L2"
+      },
+      "current_l3": {
+        "name": "Current L3"
+      },
+      "current_tariff": {
+        "name": "Current tariff",
+        "state": {
+          "day": "Day",
+          "night": "Night"
+        }
+      },
+      "current_price": {
+        "name": "Current price"
+      },
+      "session_cost": {
+        "name": "Session cost"
+      },
+      "last_session_cost": {
+        "name": "Last session cost"
+      },
+      "month_cost": {
+        "name": "Current month cost"
+      },
+      "month_energy": {
+        "name": "Current month energy"
+      },
+      "month_day_energy": {
+        "name": "Energy this month (day)"
+      },
+      "month_night_energy": {
+        "name": "Energy this month (night)"
+      },
+      "total_cost": {
+        "name": "Total cost"
+      },
+      "total_day_cost": {
+        "name": "Total day cost"
+      },
+      "total_night_cost": {
+        "name": "Total night cost"
+      }
+    },
+    "binary_sensor": {
+      "ground": {
+        "name": "Ground problem"
+      },
+      "charging": {
+        "name": "Charging"
+      }
+    },
+    "switch": {
+      "charging_enabled": {
+        "name": "Charging enabled"
+      },
+      "one_charge": {
+        "name": "One charge"
+      },
+      "adaptive_mode": {
+        "name": "Adaptive mode"
+      },
+      "ground_control": {
+        "name": "Ground control"
+      }
+    },
+    "number": {
+      "current_limit": {
+        "name": "Charging current"
+      }
+    },
+    "button": {
+      "new_session": {
+        "name": "Start new session"
+      },
+      "reset_counts": {
+        "name": "Reset counts"
+      },
+      "reset_totals": {
+        "name": "Reset totals"
+      },
+      "reapply_current": {
+        "name": "Re-apply current"
+      },
+      "end_session": {
+        "name": "End charging session"
+      }
+    }
+  }
+}
