@@ -1,6 +1,9 @@
 {
   "domain": "evse_charging_cost",
   "name": "Eveus EV Charger + Cost",
+  "after_dependencies": [
+    "frontend"
+  ],
   "codeowners": [
     "@itsalko"
   ],
@@ -13,8 +16,5 @@
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/itsalko/ha-eveus-charger-cost/issues",
   "requirements": [],
-  "version": "2.13.0",
-  "after_dependencies": [
-    "frontend"
-  ]
+  "version": "2.13.1"
 }
