@@ -12,8 +12,6 @@ Standalone Home Assistant integration for **Eveus / Energy Star EVSE** chargers
 (Lite+, Pro, …). It talks to the charger directly over your local network and
 adds **two-zone (day / night) cost accounting** on top.
 
-No other integration is required – `ha-evse-charger` can be removed.
-
 ## What it does
 
 * Polls the charger's own web API (`/init`, `/main`) every few seconds.
